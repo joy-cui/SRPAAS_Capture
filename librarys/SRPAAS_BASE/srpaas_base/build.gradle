@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+def SDK_BASENAME = "srpaas_base";
+def SDK_VERSION = "0.1.0";
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName SDK_VERSION
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+}
+
+def sdkDestinationPath = "/";
+def zipFile = file('build/intermediates/bundles/release/classes.jar')
+def JAR_NAME=SDK_BASENAME +"_v";
+
+task deleteBuild(type: Delete) {
+    delete sdkDestinationPath + JAR_NAME + SDK_VERSION + ".jar"
+}
+
+task makeJar(type: Jar) {
+    from zipTree(zipFile)
+    from fileTree(dir: 'src/main', includes: ['assets/**'])
+    baseName = JAR_NAME + SDK_VERSION
+    destinationDir = file(sdkDestinationPath)
+}
+
+makeJar.dependsOn(deleteBuild, build)
+

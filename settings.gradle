@@ -1,0 +1,6 @@
+include ':CaptureDemo', ':srpaas_capture'
+include ':SRPAAS_BASE'
+project (':SRPAAS_BASE').projectDir = new File('/librarys/SRPAAS_BASE/')
+include ':SRPAAS_BASE:srpaas_base'
+
+

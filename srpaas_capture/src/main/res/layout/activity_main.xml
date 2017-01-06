@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="1px"
+        android:layout_height="1px" />
+
+    <org.suirui.srpass.render.GLFrameSurface
+        android:id="@+id/glrender_surface"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <org.suirui.srpass.render.GLFrameSurface
+        android:id="@+id/glrender_surface2"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <org.suirui.srpass.render.GLFrameSurface
+        android:id="@+id/glrender_surface3"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <org.suirui.srpass.render.GLFrameSurface
+        android:id="@+id/glrender_surface4"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+</LinearLayout>

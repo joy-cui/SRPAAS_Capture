@@ -1,0 +1,3 @@
+[submodule "librarys/SRPAAS_BASE"]
+	path = librarys/SRPAAS_BASE
+	url = git@git.suirui.com:SRAndroid_LIB/SRPAAS_BASE.git

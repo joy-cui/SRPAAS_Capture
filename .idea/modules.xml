@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CaptureDemo/CaptureDemo.iml" filepath="$PROJECT_DIR$/CaptureDemo/CaptureDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarys/SRPAAS_BASE/SRPAAS_BASE.iml" filepath="$PROJECT_DIR$/librarys/SRPAAS_BASE/SRPAAS_BASE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SRPAAS_Capture.iml" filepath="$PROJECT_DIR$/SRPAAS_Capture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarys/SRPAAS_BASE/srpaas_base/srpaas_base.iml" filepath="$PROJECT_DIR$/librarys/SRPAAS_BASE/srpaas_base/srpaas_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpaas_capture/srpaas_capture.iml" filepath="$PROJECT_DIR$/srpaas_capture/srpaas_capture.iml" />
+    </modules>
+  </component>
+</project>
